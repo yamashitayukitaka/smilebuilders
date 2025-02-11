@@ -1,0 +1,60 @@
+.c-button {
+  &--more{
+    margin: auto;
+    display: block;
+    background:$pureBlack;
+    width:40rem;
+    text-align: center;
+    padding: 1rem;
+    color: $white;
+    border:solid 1px $white;
+    font-size:1.8rem;
+    font-family: $yuGothic;
+    font-weight: 700;
+  }
+  &--jp{
+    display: block;
+    background:$pureBlack;
+    text-align: center;
+    color: $white;
+    border:solid 1px $white;
+    font-size: 1.8rem;
+    font-family: $yuGothic;
+    width: 30rem;
+    padding: 1rem;
+    margin-left: 2rem;
+    &:hover{
+      opacity: .6;
+    }
+    @include mq(sm){
+      width: 80%;
+      margin-left: 0;
+      margin-bottom: 1rem;
+    }
+    &:nth-of-type(1){
+      margin-left: 0;
+    }
+  }
+  &--jpSmall{
+    @extend .c-button--jp;
+    width: var(--sidebar);
+    margin-bottom: 3rem;
+  }
+  &__wrap{
+    display: flex;
+    justify-content: center;
+    @include mq(sm){
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  &--arrow{
+    display: block;
+    width: 10rem;
+    height:2rem;
+    background-size:contain !important;
+    background-repeat: no-repeat !important;
+    background: url(../dist/img/common/arrow@2x.png);
+  }
+}
+  

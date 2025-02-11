@@ -1,0 +1,27 @@
+.c-pagination{
+  & .nav-links{
+    display: flex;
+    justify-content: center;
+    transform: translateX(-2rem);
+  }
+  & .page-numbers{
+    display:flex;
+    color:$white;
+    border:solid 1px $white;
+    width: 5rem;
+    height: 5rem;
+    background:$pureBlack;
+    font-size: 1.8rem;
+    justify-content: center;
+    align-items: center;
+    font-family:$Kozuka;
+    margin-left:2rem;
+    opacity: .6;
+    &:hover{
+      opacity: 1;
+    }
+  }
+  & .current{
+    opacity:1;
+  }
+}

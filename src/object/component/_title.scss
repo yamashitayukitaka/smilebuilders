@@ -1,0 +1,47 @@
+.c-title{
+  &--section{
+    color:#fff;
+    font-size:4.2rem;
+    display: flex;
+    font-family: $yuGothic;
+    font-weight:600;
+    justify-content: center;
+    line-height: 1.2;
+    align-items: center;
+  }
+  &--sectionJp{
+    color:#fff;
+    font-size:1.6rem;
+    font-family: $yuGothic;
+    font-weight:500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__wrap{
+    padding-top: 10rem;
+    padding-right: var(--sidebar);
+    background:$pureBlack;
+    &--section{
+      display: flex;
+      justify-content: center;
+      @include mq(){
+        flex-direction: column;
+      }
+    }
+  }
+  &__txt{
+    color:#fff;
+    font-size:2.2rem;
+    font-family: $yuGothic;
+    font-weight:bold;
+    text-align: center;
+  }
+  &__slash{
+    color:$white;
+    font-size:4.2rem;
+    @include mq{
+      display: none;
+    }
+  }
+}

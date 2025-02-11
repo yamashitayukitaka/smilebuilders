@@ -1,0 +1,215 @@
+.p-company-event{
+  background: $black;
+  padding-right: var(--sidebar);
+  padding-bottom: 10rem;
+  position: relative;
+  &__slider{
+    &__list{
+      height:100vh;
+      overflow: hidden;
+      position: relative;
+      & .slick-slide{
+        overflow: hidden;
+        & div li{
+          overflow: hidden;
+        }
+      }
+      & .slick-dots{
+        position: absolute;
+        bottom:10%;
+        & li{
+          height: 20px;
+          width: 20px;
+          border-radius: 50%;
+          overflow: hidden;
+          margin-left: 20px;
+          &:nth-of-type(1){
+            margin-left: 0;
+          }
+          & button{
+            &::before{
+              content:"" !important;
+              width: 20px;
+              height: 20px;
+              background:#fff;
+              overflow: hidden;
+              opacity:0.5;
+            }
+          }
+        }
+      }
+    }
+    &__item{
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+  }
+  &__point{
+    &__ttl{
+      text-align: center;
+      color:$white;
+      font-family:$yuGothic;
+      font-size: 2.4rem;
+      font-weight: bold;
+    }
+    &__txt{
+      text-align: center;
+      color:$white;
+      font-family:$yuGothic;
+      font-size:2rem;
+      width: 60%;
+      margin: auto;
+    }
+  }
+  &__dt{
+    width: 10rem;
+    color:$white;
+    font-weight: bold;
+    font-family: $yuGothic;
+    font-size: 1.8rem;
+  }
+  &__dd{
+    color:$white;
+    font-weight: bold;
+    font-family: $yuGothic;
+    font-size: 2.2rem;
+    margin-left: 5rem;
+  }
+  &__type{
+    color:$white;
+    background:$darkGray;
+    text-align: center;
+    display: inline-block;
+    font-family: $yuGothic;
+    font-size:1.6rem;
+    font-weight: bold;
+    padding: 0 .2rem;
+    margin-bottom: .5rem;
+    &:nth-last-of-type(1){
+      margin-bottom: 0;
+    }
+  }
+  &__mapWrap{
+    width: 60%;
+    aspect-ratio:6/4;
+    margin: auto;
+  }
+  &__ttl{
+    color:#fff;
+    font-family: $yuGothic;
+    text-align: center;
+    font-size: 3.6rem;
+    font-weight: bold;
+    margin-bottom: 5rem;
+  }
+  &__bookingWrap{
+    width: 100%;
+    margin:0 auto 10rem;
+  }
+  &__detail{
+    &__dl{
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      @include mq(){
+        flex-direction: column;
+      }
+    }
+    &__dd,
+    &__dt
+    {
+      color:#fff;
+      font-family: $yuGothic;
+      text-align: center;
+      font-size: 2.2rem;
+      font-weight: bold;
+    }
+  }
+  &__adImg{
+    &__wrap{
+      width: 100%;
+      margin: auto;
+      margin-bottom: 10rem;
+    }
+  }
+  &__reserve{
+    margin: 0 auto 10rem !important;
+  }
+  &__desc{
+    color:#fff;
+    font-family: $yuGothic;
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 10rem;
+  }
+  &__map{
+    width: 100%;
+    aspect-ratio: 6/4;
+    margin-bottom: 10rem;
+    iframe{
+      width: 100% !important;
+      height: 100% !important;
+    }
+  }
+}
+
+.slick-active{
+  opacity: 1 !important;
+}
+
+#booking-package_inputFormPanel .bottomBarPanel, #booking-package_pay_with_stripe_konbini .bottomBarPanel{
+  text-align:center;
+}
+
+#booking-package_inputFormPanel .book_now_button, #booking-package_inputFormPanel .next_page_button, #booking-package-subscription_form .book_now_button{
+  width: 200px !important;
+  background:orange;
+  color:#fff;
+  font-weight:bold;
+}
+#booking-package_inputFormPanel .return_form_button {
+  width: 200px !important;
+  background:orange;
+  color:#fff;
+  font-weight:bold;
+}
+
+#returnToCalendarButton{
+  width: 200px !important;
+  background:orange;
+  color:#fff;
+  font-weight:bold;
+  display: flex;
+  justify-content: center;
+  font-weight: bold !important;
+}
+
+#booking-package_calendarPage .available_day .dateField{
+  border: solid 3px red;
+  border-radius: 50%;
+  height: 5rem;
+  width: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include mq(sm){
+    width: 4rem;
+    height: 4rem;
+  }
+}
+
+#booking-package_calendarPage .symbolPanel{
+  display: none !important;
+}
+
+#booking-package_calendarPage .day_slot{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#bottomPanel{
+  justify-content: center !important;
+}

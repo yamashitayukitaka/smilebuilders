@@ -1,0 +1,77 @@
+.p-event{
+  @extend .p-top__event;
+  &__list{
+    display: flex;
+    margin-bottom: 10rem;
+    flex-wrap: wrap;
+    gap: 5%;
+    @include mq(){
+      gap: 10%;
+    }
+  }
+  &__item{
+    @extend .p-top__event__item;
+    margin-left:5%;
+    margin-bottom:5rem;
+    @include mq(lg){
+      margin-left: 0;
+      width: 45% !important;
+    }
+    &:nth-of-type(3n + 1){
+      margin-left:0;
+    }
+  }
+  &__itemTtl{
+    @extend .p-top__event__itemTtl;
+  }
+  &__itemImgWrap{
+    @extend .p-top__event__itemImgWrap;
+  }
+  &__itemImg{
+    height: 100%;
+  }
+  &__content{
+    @extend .p-top__event__content;
+  }
+  &__date{
+    @extend .p-top__event__date;
+    &--single{
+      color: $white;
+      font-weight: bold;
+      font-family: $yuGothic;
+      font-size: 1.8rem;
+    }
+  }
+  &__button{
+    margin: 0 auto 10rem !important;
+  }
+  &__search{
+    display: inline-flex;
+    flex-direction: column;
+    &__ttl{
+      color:$white;
+      font-family: $yuGothic;
+      font-size:2.2rem;
+      font-weight: bold;
+      background: $pureBlack;
+      padding:.5rem 1rem;
+      margin-bottom: .5rem;
+    }
+    &__linkWrap{
+      padding: 0 1rem 2rem;
+    }
+    &__link{
+      color:$white;
+      font-family: $yuGothic;
+      display: block;
+      font-size: 1.8rem;
+      font-weight: bold;
+      padding: 0 1rem;
+      & a{
+        color:$white !important;
+        font-family: $yuGothic;
+        font-weight: bold;
+      }
+    }
+  }
+}

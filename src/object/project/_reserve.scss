@@ -1,0 +1,18 @@
+.p-reserve{
+  &__imgWrap{
+    width:75%;
+    height:auto;
+    margin: auto;
+    margin-bottom:20rem;
+  }
+  &__list{
+    justify-content: center;
+    @include mq(){
+      justify-content: space-between;
+    }
+    &__item{
+      background: #fff;
+      width: 22%;
+    }
+  }
+}

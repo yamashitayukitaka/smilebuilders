@@ -1,0 +1,161 @@
+[v-cloak] {
+  display: none;
+}
+
+.kc-spinner {
+  padding: 50px 0;
+}
+
+
+/* API以外のcss */
+
+@media screen and (max-width: 767px) {}
+
+/* API以外のcss */
+
+/* hover */
+
+/* hover */
+
+
+
+
+
+/* topページ */
+.p-content__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10rem;
+  position: relative;
+  flex-wrap: wrap;
+  -moz-column-gap: 4%;
+  column-gap: 4%;
+  row-gap: 2rem;
+  z-index: 1;
+}
+
+.p-content__list.-top {
+  justify-content: center;
+}
+
+.index-page__events-event {
+  width: 22%;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  padding: 0px;
+  background: rgb(255, 255, 255);
+  border-radius: initial;
+}
+
+.p-content__list__adImgWrap {
+  width: 100%;
+  aspect-ratio: 5 / 4;
+}
+
+.index-page__events-event-content {
+  padding: 1rem;
+  margin-left: initial;
+  width: 100%;
+}
+
+.p-content__list__labelWrap {
+  display: flex;
+  justify-content: center;
+  gap: 2%;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.p-content__list__label--type {
+  font-family: YuGothic, "Yu Gothic", sans-serif;
+  font-weight: bold;
+  line-height: 1.2;
+  display: inline-block;
+  background: rgb(125, 125, 125);
+  font-size: 1.6rem;
+  padding: 5px 10px;
+  white-space: nowrap;
+  margin-bottom: 5px;
+  color: rgb(255, 255, 255);
+}
+
+.p-content__list__label--reception {
+  font-family: YuGothic, "Yu Gothic", sans-serif;
+  font-weight: bold;
+  line-height: 1.2;
+  height: initial;
+  background: rgb(255, 255, 255);
+  font-size: 1.6rem;
+  padding: 5px 10px;
+  white-space: nowrap;
+  margin-bottom: 5px;
+  border: 1px solid rgb(115, 115, 115);
+  display: inline-block;
+}
+
+.index-page__events-event-name {
+  overflow: initial;
+  white-space: initial;
+  text-overflow: initial;
+  text-align: center;
+  font-family: YuGothic, "Yu Gothic", sans-serif;
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: 1.2;
+  height: initial;
+  color: rgb(70, 69, 69);
+  margin-bottom: 10px;
+}
+
+.p-content__list__day {
+  text-align: center;
+  font-weight: bold;
+  color: red;
+  margin-bottom: 5px;
+  font-size: 14px;
+  line-height: 1.3em;
+  font-family: YuGothic, "Yu Gothic", sans-serif;
+}
+
+.p-content__list__eventAddress {
+  height: initial;
+  font-family: YuGothic, "Yu Gothic", sans-serif;
+  font-weight: bold;
+  line-height: 1.2;
+  color: rgb(70, 69, 69);
+  text-align: center;
+  font-size: 14px;
+}
+
+.p-content__list__companyName {
+  font-family: YuGothic, "Yu Gothic", sans-serif;
+  font-weight: bold;
+  line-height: 1.2;
+  color: rgb(70, 69, 69);
+  text-align: center;
+  font-size: 14px;
+  padding-bottom: 10px;
+}
+
+.index-page__events-event.-top:nth-of-type(4) {
+  display: none !important;
+}
+
+@media screen and (max-width: 1025px) {
+  .index-page__events-event.-top:nth-of-type(4) {
+    display: block !important;
+  }
+}
+
+
+/* topページ */
+
+
+
+/* イベント一覧ページ */
+
+@media screen and (max-width: 768px) {}
+
+
+/* イベント一覧ページ */

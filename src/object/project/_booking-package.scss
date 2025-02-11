@@ -1,0 +1,58 @@
+#booking-package_inputFormPanel .bottomBarPanel, #booking-package_pay_with_stripe_konbini .bottomBarPanel{
+  text-align:center;
+}
+
+#booking-package_inputFormPanel .book_now_button, #booking-package_inputFormPanel .next_page_button, #booking-package-subscription_form .book_now_button{
+  width: 200px !important;
+  background:orange;
+  color:#fff;
+  font-weight:bold;
+}
+#booking-package_inputFormPanel .return_form_button {
+  width: 200px !important;
+  background:orange;
+  color:#fff;
+  font-weight:bold;
+}
+
+#returnToCalendarButton{
+  width: 200px !important;
+  background:orange;
+  color:#fff;
+  font-weight:bold;
+  display: flex;
+  justify-content: center;
+  font-weight: bold !important;
+}
+
+#booking-package_calendarPage .available_day .dateField{
+  border: solid 3px red;
+  border-radius: 50%;
+  height: 5rem;
+  width: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include mq(sm){
+    width: 4rem;
+    height: 4rem;
+  }
+}
+
+#booking-package_calendarPage .symbolPanel{
+  display: none !important;
+}
+
+#booking-package_calendarPage .day_slot{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#bottomPanel{
+  justify-content: center !important;
+}
+
+.calendarNotFound{
+  display: none;
+}

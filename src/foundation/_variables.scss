@@ -1,0 +1,39 @@
+// Color
+$white: #ffffff;
+$beige: #ebe1d5;
+$lightBeige: #faf5ef;
+$brown: #9d6f2e;
+$deepBrown: #452c08;
+$darkBrown: #260000;
+$lightYellow: #eed08f;
+$lineColor: #00c900;
+$gray: #c9c9c9;
+$opacityGreen:rgba(0, 148, 61, 0.5);
+$green:#00943D;
+$darkGray:#7D7D7D;
+$opacityBlack:rgba(83, 79, 73, 0.8);
+$lightBlack:rgba(83, 79, 73, 0.8);
+$black: #464545;
+$pureBlack:#231815;
+
+// Font
+$Kozuka:'Kozuka Gothic Pr6N', sans-serif;
+$yuGothic: YuGothic, "Yu Gothic", sans-serif;
+$yuMincho: YuMincho, "Yu Mincho", serif;
+$montserrat: "Montserrat", sans-serif;
+
+// メディアクエリ
+$breakpoints: (
+  "sm": "screen and (max-width: 520px)",
+  "md": "screen and (max-width: 768px)",
+  "lg": "screen and (max-width: 1025px)",
+  "xl": "screen and (max-width: 1200px)",
+  "xxl": "screen and (max-width: 1400px)",
+  "xxxl": "screen and (max-width: 1500px)",
+) !default;
+
+@mixin mq($breakpoint: md) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}

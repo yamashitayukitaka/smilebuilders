@@ -1,0 +1,16 @@
+.c-txt{
+  &--middle{
+    font-size: 1.6rem;
+    letter-spacing:.04rem;
+    line-height: calc(38/16);
+    font-weight:400;
+    text-align: center;
+  }
+  &--middleBold{
+    font-size: 1.6rem;
+    letter-spacing:.04rem;
+    line-height: calc(38/16);
+    font-weight: bold;
+    text-align: center;
+  }
+}

@@ -1,0 +1,54 @@
+.c-table{
+  width: 100%;
+  &__th{
+    font-weight: bold;
+    font-size: 1.6rem;
+    width: calc(280/900*100%);
+    padding-left: 3.4rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    display: flex;
+    align-items: center;
+  }
+  &__td{
+    width:calc(620/900*100%);
+    padding-left: 3.4rem;
+    font-weight:bold;
+    font-size: 1.6rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    display: flex;
+    align-items: center;
+  }
+  &__tr{
+    border-bottom: solid 1px $gray;
+    display: flex;
+  }
+  &__about{
+    width: 100%;
+    &__tbody{
+      width: 100%;
+    }
+    &__tr{
+      width: 100%;
+      display:flex;
+      justify-content: space-between;
+      
+    }
+    &__th{
+      display: block;
+      width: calc(180/900*100%);
+      border-bottom: solid 1px $orange !important;
+      padding:2.5rem 0;
+      text-align: center;
+      color:$orange
+    }
+    &__td{
+      display: block;
+      width: calc(675/900*100%);
+      border-bottom: solid 1px $gray !important;
+      padding:2.5rem 0  2.5rem  3rem;
+      
+    }
+  }
+}

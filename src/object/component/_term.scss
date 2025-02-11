@@ -1,0 +1,74 @@
+.c-term{
+  &__list{
+    display: flex;
+    flex-wrap: wrap;
+    width:1000px;
+    margin: auto;
+    margin-bottom:15rem;
+    gap: 4%;
+    flex-wrap: wrap;
+    @include mq(xxl){
+      width:700px;
+    }
+    @include mq(){
+      width:100%;
+    }
+  }
+  &__item{
+    display: block;
+    background:$pureBlack;
+    text-align: center;
+    width:22%;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border:solid 1px $white;
+    @include mq(){
+      width: 48%;
+    }
+    //margin-left: calc(12/3 *1%);
+    /*
+    &:nth-of-type(1){
+      margin-left: 0 !important;
+    }
+    &:nth-of-type(4n+2){
+      margin-left: 0;
+      @include mq(xxl){
+        margin-left:5%;
+      }
+    }
+    &:nth-of-type(3n+2){
+      @include mq(xxl){
+       margin-left: 0;
+      }
+    }
+    &:nth-of-type(2n + 2){
+      @include mq(){
+       margin-left: 0;
+      }
+    }
+    &:nth-of-type(2n - 1){
+      @include mq(){
+       margin-left:4%;
+      }
+    }
+    @include mq(xxl){
+      width: 30%;
+      margin-left: 5%;
+    }
+    @include mq(){
+      width: 48%;
+    }*/
+    &__link{
+      font-weight: bold;
+      color: $white;
+      font-size: 1.8rem;
+      font-family: $yuGothic;
+      display: block;
+      width: 100%;
+    }
+    &--all{
+      @extend .c-term__item;
+      width: 100%;
+    }
+  }
+}

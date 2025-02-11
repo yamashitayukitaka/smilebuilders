@@ -1,0 +1,29 @@
+.p-bread {
+  &__link,
+  &__current {
+    line-height: 1;
+  }
+  &__list{
+    display:flex;
+    &__item{
+      color:$white;
+      font-size: 1.8rem;
+      font-family: $yuGothic;
+      font-weight: bold;
+      &--black{
+        @extend .p-bread__list__item;
+        color:$black;
+      }
+    }
+    &__link{
+      color:$white;
+      font-size: 1.8rem;
+      font-family: $yuGothic;
+      font-weight: bold;
+      &--black{
+        @extend .p-bread__list__link;
+        color:$black;
+      }
+    }
+  }
+}

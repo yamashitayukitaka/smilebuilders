@@ -1,0 +1,243 @@
+.p-hamburger {
+  width:0;
+  height:0;
+  position:fixed;
+  top:50%;
+  left:50%;
+  overflow: hidden;
+  display: none;
+  transform: translate(-50%,-50%);
+  border-radius: 50%;
+  padding-top: 20rem;
+  &__nav{
+    width: 100%;
+    height: 100%;
+    padding-right: var(--sidebar);
+    &__item{
+      margin-bottom: 2rem;
+    }
+    &__link{
+      font-size: 1.8rem;
+      font-family: $yuGothic;
+      font-weight: 900;
+      color: $white;
+      text-align: center;
+      display: block;
+    }
+    &__list{
+      border-bottom: solid 1px $white;
+      width: 80%;
+      margin: auto;
+      margin-bottom: 1rem;
+    }
+    &__jp{
+      color:$white;
+      display: block;
+      font-family: $yuGothic;
+      font-size: 1.6rem;
+    }
+  }
+  &__fixedNav{
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99;
+    height: 100vh;
+    background:$opacityBlack;
+    width:200px;
+    @include mq(lg){
+      width: 0;
+    }
+    &__button{
+      display: block;
+      color:$white;
+      width: 100%;
+      text-align: center;
+      padding:10px 0;
+      background:rgb(159, 99, 99);
+      margin-bottom:2rem;
+      font-family: $yuGothic;
+      font-weight: 600;
+      @include mq(lg){
+        margin-bottom: 0;
+        border-left: 1px solid #fff;
+        background:rgb(159, 99, 99);
+      }
+    }
+    &__buttonWrap{
+      width:200px;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      @include mq(lg){
+        width: 100vw;
+        position: absolute;
+        right: 0;
+        left: initial;
+        bottom: 0;
+      }
+    }
+    &__bottomWrap{
+      display: flex;
+      flex-direction:column;
+      @include mq(lg){
+        flex-direction: initial;
+      }
+    }
+    &__snsList{
+      display: flex;
+      width: 92%;
+      margin: auto;
+      justify-content: space-between;
+      margin-bottom:.8rem;
+      @include mq(lg){
+        display: none;
+      }
+      &--open{
+        height: auto;
+        display: flex;
+        width: 250px;
+        margin: auto;
+        justify-content: space-between;
+      }
+    }
+    &__snsItem{
+      width: 30%;
+    }
+  }
+  &__menu{
+    width:calc(20/45*100%);
+    height:90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $darkGray;
+    color:$white;
+    font-size:1.4rem;
+    @include mq(lg){
+      display: none;
+    }
+    &__wrap{
+      display: flex;
+      @include mq(lg){
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+    }
+  }
+  &__button{
+    width:calc(25/45*100%);
+    height:90px;
+    position: relative;
+    background: $pureBlack;
+    @include mq(lg){
+      width: 110px;
+      height:65px;
+    }
+    &:hover{
+      cursor: pointer;
+      opacity: .6;
+    }
+    &__line{
+      display: block;
+      width: 100%;
+      height: 2px;
+      background:$white;
+      &:nth-of-type(1){
+        position: absolute;
+        width:50%;
+        top:35%;
+        right:25%;
+      }
+      &:nth-of-type(2){
+        position: absolute;
+        top:50%;
+        width:(105/250*100%);
+        right: 25%;
+      }
+      &:nth-of-type(3){
+        position: absolute;
+        top:65%;
+        width:calc(85/250*100%);
+        right: 25%;
+      }
+    }
+  }
+}
+
+.open{
+  & .p-hamburger{
+    &__button{
+      &__line{
+        &:nth-of-type(1){
+          top: 50%;
+          width: 45%;
+          transform: rotate(-45deg);
+          transition-property: all;
+          transition-duration: .5s;
+        }
+        &:nth-of-type(2){
+          top:50%;
+          opacity: 0;
+        }
+        &:nth-of-type(3){
+          top:50%;
+          width: 45%;
+          transform: rotate(45deg);
+          transition-property: all;
+          transition-duration: .5s;
+        }
+      }
+    }
+  }
+}
+
+.show{
+  display: block;
+  animation-name:sizeAnime;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+  animation-duration: .5s;
+}
+
+@keyframes sizeAnime{
+  0%{
+    width: 0;
+    height: 0;
+    border-radius:50%;
+    background: $white;
+  }
+  5%{
+    width: 5%;
+    height:10%;
+    background: $white;
+    border-radius:50%;
+  }
+  10%{
+    width: 10%;
+    height: 20%;
+    background: $white;
+    border-radius:50%;
+  }
+  30%{
+    background: $white;
+  }
+  50%{
+    border-radius:50%;
+  }
+  100%{
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0%;
+    background:rgba(0, 0, 0, 0.7);
+  }
+}
+
+/*
+.navOpen{
+  transform: translateX(0);
+  transition-property: all;
+  transition-duration: .8s;
+}*/
+

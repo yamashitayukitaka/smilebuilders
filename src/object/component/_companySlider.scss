@@ -1,0 +1,34 @@
+.c-companySlider{
+  padding-top:5rem;
+  padding-right:var(--sidebar);
+  background: $black;
+  &__list{
+    margin-bottom: 5rem;
+    &:last-of-type{
+      margin-bottom: 0;
+    }
+    & .slick-slide{
+      margin: 0 1rem;
+    }
+    &__item{
+      height:10rem;
+      background: $white;
+      position: relative;
+      overflow: hidden;
+    }
+    &__img{
+      position: absolute;
+      width: 100%;
+      object-fit: cover;
+      top: 50%;
+      transform: translateY(-50%);
+      &--svg{
+        position: absolute;
+        width: 60%;
+        left: 50%;
+        top:50%;
+        transform: translate(-50%,-50%);
+      }
+    }
+  }
+}

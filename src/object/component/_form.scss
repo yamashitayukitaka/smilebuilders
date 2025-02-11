@@ -1,0 +1,80 @@
+.c-form{
+  &__itemWrap{
+    display: flex;
+    margin-bottom: 5rem;
+    @include mq(){
+      flex-direction: column;
+    }
+  }
+  &__item{
+    color:$white;
+    width:15rem;
+    font-family: $yuGothic;
+    height:5rem;
+    display: flex;
+    align-items: center;
+  }
+  &__must{
+    color:$white;
+    width:10rem;
+    font-family: $yuGothic;
+    height:5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include mq(){
+      justify-content: flex-start;
+    }
+  }
+  &__input{
+    background: $white;
+    height:5rem;
+    border-radius: 2px;
+    width: 100%;
+    padding:0 1rem;
+    
+    &__wrap{
+      min-height: 37.5px;
+      width: calc(100% - (15rem + 10rem));
+      @include mq(){
+        width: 100%;
+      }
+    }
+  }
+  &__txtArea{
+    background: $white;
+    border-radius: 2px;
+    width: 100%;
+    padding:1rem;
+  }
+  &__btn{
+    background:rgb(204, 204, 204);
+    display: flex;
+    color: $white;
+    width: 20rem;
+    height: 8rem;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.2rem;
+    font-family: $yuGothic;
+  }
+  &__btnWrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+  }
+}
+
+.mwform-zip-field{
+  color:$white !important;
+}
+
+.error{
+  color:$white !important;
+}
+
+
+
+
+	

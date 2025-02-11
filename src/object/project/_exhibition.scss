@@ -1,0 +1,400 @@
+.p-exhibition{
+  background: $black;
+  padding-right: var(--sidebar);
+  padding-top: 15rem;
+  &__list{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom:3rem;
+    @include mq(){
+      justify-content: space-between;
+    }
+    &__arrow{
+      margin-left: auto;
+      transform: translateX(-20%);
+    }
+    &__item{
+      width: 30%;
+      margin-left:5%;
+      margin-bottom: 5rem;
+      position: relative;
+      overflow: hidden;
+      height: auto;
+      @include mq(){
+        width: 45%;
+        margin-left: 0;
+      }
+      &:nth-of-type(3n+1){
+        margin-left: 0;
+      }
+    }
+    &__link{
+      display: block;
+      &:hover{
+        opacity: 1 !important;
+        .p-exhibition__list__thumb{
+          transform: scale(1.2);
+          transition: .5s;
+          transition-property: all;
+        }
+        .p-exhibition__list__arrow{
+          transform: translateX(0);
+          transition: .5s;
+          transition-property: all;
+        }
+      }
+    }
+    &__thumb{
+      position: absolute;
+      width:100%;
+      bottom: 0;
+    }
+    &__thumbTtl{
+      font-family: $yuGothic;
+      color:$white;
+      font-size: 20px;
+      font-weight: bold;
+      white-space:nowrap;
+      @include mq(xl){
+        font-size:16px;
+      }
+      @include mq(sm){
+        font-size: 12px;
+      }
+    }
+    &__thumbWrap{
+      aspect-ratio: 5/4;
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 3rem;
+    }
+    &__logo{
+      display: block;
+      width: 50%;
+      position: absolute;
+      left:0;
+      bottom:0;
+      background:$white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height:auto;
+      @include mq(lg){
+        width: 100%;
+        left: 0;
+        bottom: 0;
+      }
+    }
+    &__logoImg{
+      width: 80%;
+    }
+  }
+  &__txt{
+    font-size: 2.4rem;
+    color: $white;
+    font-family:$yuGothic;
+    font-weight: 600;
+    text-align: center;
+    &--large{
+      font-size:3.6rem;
+      color: $white;
+      font-family: $yuGothic;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 10rem;
+    }
+  }
+  &__company{
+    height:15rem;
+    background: $white;
+    position: relative;
+    &__img{
+      display: block;
+      width:40rem;
+      position: absolute;
+      top: 50%;
+      left:calc(50% - (var(--sidebar)/2));
+      transform: translate(-50%,-50%);
+      @include mq(sm){
+        width: 30rem;
+      }
+    }
+  }
+  &__single{
+    @extend .p-exhibition;
+    padding-top:5rem;
+    padding-bottom: 10rem;
+    @include mq(lg){
+      padding-top: 0;
+    }
+    &__mvWrap{
+      display: flex;
+      @include mq(lg){
+        flex-direction: column;
+      }
+    }
+  }
+  &__copy{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:$white;
+    font-size: 2.4rem;
+    font-family: $yuMincho;
+    flex-direction: column;
+    @include mq(lg){
+      width: 100%;
+      padding: 3rem 0;
+    }
+    &__sub{
+      font-size: 2.4rem;
+      font-family: $yuMincho;
+      color:$white;
+    }
+  }
+  &__mainImg{
+    height: 100%;
+    &__wrap{
+      width: 60%;
+      //height: 400px;
+      @include mq(lg){
+        width: 100%;
+      }
+    }
+  }
+  &__booking{
+    padding-right: var(--sidebar);
+    &__content{
+      padding: 10%;
+    }
+  }
+  &__descWrap{
+    display:inline-flex;
+    flex-direction: column;
+    align-items: center;
+    width:60%;
+    @include mq(lg){
+      width: 92%;
+    }
+  }
+  &__desc{
+    color: $white;
+    font-family:$yuMincho;
+    font-size:3rem;
+    margin-bottom: 0.8rem;
+    padding:0 0.5rem;
+  }
+  &__longDesc{
+    @extend .p-exhibition__desc;
+    font-size:2.2rem;
+    padding: 0;
+  }
+  &__imgList{
+    display: flex;
+    margin-bottom: 10rem;
+    flex-wrap: wrap;
+    &__item{
+      aspect-ratio: 1/1;
+      overflow:hidden;
+      margin-bottom: 5rem;
+      &:nth-of-type(1){
+        margin-left: 0 !important;
+      }
+    }
+    &__link{
+      display: block !important;
+      width: 100%;
+      height: 100%;
+    }
+    &__img{
+      height: 100%;
+    }
+  }
+  &__video{
+    width: 100%;
+    &__link{
+      display: block;
+      aspect-ratio:6/4;
+      overflow: hidden;
+      position: relative;
+      width: 75%;
+      margin: auto;
+      margin-bottom:10rem;
+      @include mq(xxl){
+        width:92%;
+      }
+    }
+    &__wrap{
+      width: 120%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+    }
+  }
+  &__info{
+    @include mq(xxl){
+      margin-bottom:2rem;
+    }
+    &__comName{
+      color: $white;
+      font-size: 2.4rem;
+      font-family: $yuGothic;
+      font-weight: bold;
+      border-left:solid 3px $white;
+      padding-left: 1rem;
+      margin-bottom:1.5rem;
+    }
+    &__txt{
+      color: $white;
+      font-size: 2.0rem;
+      font-family: $yuGothic;
+      font-weight: bold;
+      padding-left: 1rem;
+      line-height: 1;
+      margin-bottom: 1.5rem;
+    }
+    &__num{
+      @extend .p-exhibition__info__txt;
+      padding-left:0 !important;
+    }
+    &__wrap{
+      display: flex;
+      width: 75%;
+      justify-content: space-between;
+      margin-bottom: 10rem;
+      @include mq(xxl){
+        flex-direction: column;
+        width: 92%;
+      }
+    }
+  }
+  &__table{
+    margin-left: 10rem;
+    border:solid 1px $white;
+    @include mq(xxl){
+      margin-left: 0;
+    }
+    & tr{
+      border:solid 1px $white;
+    }
+    &__th{
+      @extend .p-exhibition__info__txt;
+      border-right:solid 1px $white;
+      padding:1.2rem 2.5rem;
+      margin-bottom: 0;
+      text-align: center;
+      vertical-align: middle
+    }
+    &__td{
+      @extend .p-exhibition__info__txt;
+      padding:1.2rem 2.5rem;
+      margin-bottom: 0;
+      text-align: center;
+      vertical-align: middle;
+    }
+  }
+  &__guide{
+    width:75%;
+    margin:0 auto 10rem;
+    color: $white;
+    font-family:$yuMincho;
+    font-size:2.2rem;
+    padding:0;
+    @include mq(lg){
+      width:92%;
+    }
+    &__ttl{
+      color:$white;
+      font-size: 3rem;
+      font-family: $yuMincho;
+      margin-bottom: 5rem;
+      text-align: center;
+      @include mq(lg){
+        width:92%;
+      }
+    }
+  }
+  &__blueprint{
+    &__content{
+      width: 60%;
+      margin: auto;
+      position: relative;
+    }
+    &__logo{
+      display: block;
+      width: 25rem;
+      height: 15rem;
+      margin-left: auto;
+    }
+    &__img{
+      width: 75%;
+      margin: 5rem auto 15rem;
+      @include mq(lg){
+        width: 100%;
+      }
+    }
+  }
+  &__calendar{
+    display: block;
+    margin: auto;
+    background: #fff;
+    @include mq(){
+      width: 100%;
+      padding: 2%;
+    }
+    &__ttl{
+      color:#fff;
+      font-family: $yuMincho;
+      text-align: center;
+      margin-bottom: 3rem;
+      font-size: 2.4rem;
+    }
+  }
+  &__bulk{
+    background: #fff;
+    &__wrap{
+      text-align: center;
+    }
+    &__txt{
+      color:#fff;
+      text-align: center;
+      font-family: $yuGothic;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+  }
+}
+
+.youtube-video{
+  position: relative;
+  z-index: -1;
+}
+
+.event__calendar__hint{
+  color: #fff !important;
+}
+
+input.p-exhibition__bulk__input {
+  height:100%;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.p-exhibition__bulk__inputWrap{
+  width: 4rem;
+  height: 4rem;
+  border: solid .3rem orange;
+  position: relative;
+}
+
+
+
+
+
+      

@@ -1,0 +1,26 @@
+.c-navigation{
+  width: 80%;
+  &__list{
+    display: flex;
+    gap: 2%;
+    justify-content: right;
+    &__link{
+      font-size: 1.8rem;
+      font-family: $yuGothic;
+      font-weight: 900;
+      color: $black;
+      text-align: center;
+      display: block;
+    }
+    &__jp{
+      display: block;
+      font-size: 1.2rem;
+      font-family: $yuGothic;
+      font-weight: 900;
+      color: $pureBlack;
+      width: 100%;
+      text-align: center;
+      white-space:nowrap;
+    }
+  }
+}

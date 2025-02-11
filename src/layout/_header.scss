@@ -1,0 +1,62 @@
+.l-header {
+  position:absolute;
+  top: 0;
+  left: 0;
+  z-index:9999;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 90px;
+  @include mq(lg){
+    height: 65px;
+    background:$pureBlack;
+    position: fixed;
+  }
+  &__content{
+    width: 100%;
+    height: 100%;
+    padding-right: var(--sidebar);
+    
+    &__inner{
+      display: flex;
+      align-items: center;
+      height: 100%;
+      justify-content: space-between;
+    }
+  }
+  &__logo{
+    width:15rem;
+    display: block;
+    &__img{
+      width:100% !important;
+    }
+  }
+ }
+
+#wpadminbar{
+  position: fixed !important;
+  top:initial !important;
+  bottom: 0 !important;
+}
+
+#wpadminbar .show-template-name, #wpadminbar .hover .show-template-name{
+  color: #fff;
+}
+
+
+
+@keyframes spin {
+  from {
+    opacity:0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.loaded {
+  opacity: 0;
+  //visibility: hidden;
+  display: none !important;
+}
+
